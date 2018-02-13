@@ -50,7 +50,7 @@ def coordinates(lst_loc):
     return lst
 
 
-def point():
+def create_html():
     '''
     Main function, create HTML file and enter information to it
     '''
@@ -74,8 +74,8 @@ def point():
                                                               'POP2005'] < 20000000
                                             else 'red'}))
 
-    map1.add_child(population)
     map1.add_child(films)
+    map1.add_child(population)
     map1.add_child(folium.LayerControl())
     map1.save('result.html')
-point()
+create_html()
